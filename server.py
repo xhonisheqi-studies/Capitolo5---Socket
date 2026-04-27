@@ -19,6 +19,7 @@ s.listen(1)
 while True: 
     # accettiamo la connessione
     client_socket,addr = s.accept()
+    print(f"New Connection from {client_socket.getsockname()}" )
     # riceviamo il domain da parte del client
     domain = client_socket.recv(4096).decode('utf-8').strip()
     # creiamo un socket per la richiesta sulla porta 80 da parte del client
