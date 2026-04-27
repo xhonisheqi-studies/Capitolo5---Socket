@@ -6,7 +6,7 @@ PORT = 50007
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.connect((HOST,PORT))
-s.sendall(b'Hello, World')
+s.sendall(b'Hello, World!')
 
 data = s.recv(4096)
 # while True:
